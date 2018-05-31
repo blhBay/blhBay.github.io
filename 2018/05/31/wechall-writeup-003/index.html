@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="blog_bay">
 <meta property="og:description" content="[WeChall]Encodings:URL题目地址点这里 题目描述Your task is to decode the following: %59%69%70%70%65%68%21%20%59%6F%75%72%20%55%52%4C%20%69%73%20%63%68%61%6C%6C%65%6E%67%65%2F%74%72%61%69%6E%69%6E%67%2F%65%6E%63%6">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-31T09:37:54.532Z">
+<meta property="og:updated_time" content="2018-05-31T13:09:34.594Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="writeup_0003">
 <meta name="twitter:description" content="[WeChall]Encodings:URL题目地址点这里 题目描述Your task is to decode the following: %59%69%70%70%65%68%21%20%59%6F%75%72%20%55%52%4C%20%69%73%20%63%68%61%6C%6C%65%6E%67%65%2F%74%72%61%69%6E%69%6E%67%2F%65%6E%63%6">
@@ -328,8 +328,53 @@
 <h2 id="url编码"><a href="#url编码" class="headerlink" title="url编码"></a>url编码</h2><p>url编码是一种浏览器用来打包表单输入的格式。浏览器从表单中获取所有的name和其中的值 ，将它们以name/value参数编码（移去那些不能传送的字符，将数据排行等等）作为URL的一部分或者分离地发给服务器。</p>
 <h1 id="WeChall-PrimeFactory"><a href="#WeChall-PrimeFactory" class="headerlink" title="[WeChall]PrimeFactory"></a>[WeChall]PrimeFactory</h1><p><a href="http://www.wechall.net/challenge/training/prime_factory/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
 <h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>找素数<br>Your task is simple:<br>Find the first two primes above 1 million, whose separate digit sums are also prime.<br>As example take 23, which is a prime whose digit sum, 5, is also prime.<br>The solution is the concatination of the two numbers,<br>Example: If the first number is 1,234,567<br>and the second is 8,765,432,<br>your solution is 12345678765432</p>
-<h2 id="writeup-1"><a href="#writeup-1" class="headerlink" title="writeup"></a>writeup</h2><p>写程序<br>    def isPrime(n):<br>    for i in range(2,n):<br>        if i*i &lt;= n:<br>            if n%i == 0:<br>                return False<br>    return True</p>
-<pre><code>def sumA(n):
+<h2 id="writeup-1"><a href="#writeup-1" class="headerlink" title="writeup"></a>writeup</h2><p>写程序</p>
+<p>C++(得出答案只有一半，还不知道怎么回事)</p>
+<pre><code>#include&lt;iostream&gt;
+#include&lt;math.h&gt;
+using namespace std;
+
+int a;
+//判断n为素数的函数，将其%2~sqrt(n)，应为其因子必然一个大于sqrt而另一个小于，所以不用算到n-1
+bool IsPrime(int p) {        
+a = (int)sqrt(p) ;
+for (int i = 2; i &lt;= a; i++) {
+    if ((p%i )== 0)
+        return false;
+}
+return true;
+}
+// 求各位数之和
+int Add_Number(int number) {
+int add_number = 0;
+int one;
+while (number != 0) {
+     one= number % 10;
+     add_number += one;
+     number = number / 10;
+}
+return add_number;
+}
+
+int main() {
+int add_number;
+for (int number = 1000034;; number++) {
+    add_number = Add_Number(number);
+    if (IsPrime(number)&amp;&amp;IsPrime(add_number)) {
+        cout &lt;&lt; number &lt;&lt; endl;
+        return 0;
+        }
+    }
+}
+</code></pre><p>python(摘的)</p>
+<pre><code>def isPrime(n):
+for i in range(2,n):
+    if i*i &lt;= n:
+        if n%i == 0:
+            return False
+return True
+
+def sumA(n):
 #return n-((n-1)/9*9)
 sum=0
 while(n&gt;0):
@@ -351,8 +396,12 @@ print(a[0]+a[1])
 
 if __name__ == &apos;__main__&apos;:
 main()
-</code></pre><p>作者：诸葛硕熊<br>链接：<a href="https://www.jianshu.com/p/5144b4171cdf" target="_blank" rel="noopener">https://www.jianshu.com/p/5144b4171cdf</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
 
+作者：诸葛硕熊
+链接：https://www.jianshu.com/p/5144b4171cdf
+來源：简书
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+</code></pre>
       
     </div>
     
