@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ctf,wechall," />
 
 
 
@@ -79,17 +79,18 @@
 
 
 
-<meta name="description" content="hello world">
+<meta name="description" content="[WeChall]Encodings:URL题目地址点这里 题目描述Your task is to decode the following: %59%69%70%70%65%68%21%20%59%6F%75%72%20%55%52%4C%20%69%73%20%63%68%61%6C%6C%65%6E%67%65%2F%74%72%61%69%6E%69%6E%67%2F%65%6E%63%6">
+<meta name="keywords" content="ctf,wechall">
 <meta property="og:type" content="article">
-<meta property="og:title" content="blog_bay">
-<meta property="og:url" content="http://yoursite.com/2018/05/28/hello/index.html">
+<meta property="og:title" content="writeup_0003">
+<meta property="og:url" content="http://yoursite.com/2018/05/31/wechall-writeup-003/index.html">
 <meta property="og:site_name" content="blog_bay">
-<meta property="og:description" content="hello world">
+<meta property="og:description" content="[WeChall]Encodings:URL题目地址点这里 题目描述Your task is to decode the following: %59%69%70%70%65%68%21%20%59%6F%75%72%20%55%52%4C%20%69%73%20%63%68%61%6C%6C%65%6E%67%65%2F%74%72%61%69%6E%69%6E%67%2F%65%6E%63%6">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-28T13:51:56.801Z">
+<meta property="og:updated_time" content="2018-05-31T09:37:54.532Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="blog_bay">
-<meta name="twitter:description" content="hello world">
+<meta name="twitter:title" content="writeup_0003">
+<meta name="twitter:description" content="[WeChall]Encodings:URL题目地址点这里 题目描述Your task is to decode the following: %59%69%70%70%65%68%21%20%59%6F%75%72%20%55%52%4C%20%69%73%20%63%68%61%6C%6C%65%6E%67%65%2F%74%72%61%69%6E%69%6E%67%2F%65%6E%63%6">
 
 
 
@@ -119,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/28/hello/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/31/wechall-writeup-003/"/>
 
 
 
 
 
-  <title> | blog_bay</title>
+  <title>writeup_0003 | blog_bay</title>
   
 
 
@@ -252,7 +253,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/28/hello/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/31/wechall-writeup-003/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="blhbay">
@@ -269,7 +270,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">writeup_0003</h1>
         
 
         <div class="post-meta">
@@ -281,8 +282,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-28T21:51:56+08:00">
-                2018-05-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-31T16:47:41+08:00">
+                2018-05-31
               </time>
             
 
@@ -319,7 +320,39 @@
       
 
       
-        <h1 id="hello-world"><a href="#hello-world" class="headerlink" title="hello world"></a>hello world</h1>
+        <h1 id="WeChall-Encodings-URL"><a href="#WeChall-Encodings-URL" class="headerlink" title="[WeChall]Encodings:URL"></a>[WeChall]Encodings:URL</h1><p><a href="http://www.wechall.net/challenge/training/encodings/url/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>Your task is to decode the following:</p>
+<p>%59%69%70%70%65%68%21%20%59%6F%75%72%20%55%52%4C%20%69%73%20%63%68%61%6C%6C%65%6E%67%65%2F%74%72%61%69%6E%69%6E%67%2F%65%6E%63%6F%64%69%6E%67%73%2F%75%72%6C%2F%73%61%77%5F%6C%6F%74%69%6F%6E%2E%70%68%70%3F%70%3D%65%61%65%69%72%6F%61%6F%63%65%63%65%26%63%69%64%3D%35%32%23%70%61%73%73%77%6F%72%64%3D%66%69%62%72%65%5F%6F%70%74%69%63%73%20%56%65%72%79%20%77%65%6C%6C%20%64%6F%6E%65%21</p>
+<h2 id="writeup"><a href="#writeup" class="headerlink" title="writeup"></a>writeup</h2><p>进行url解码即可得到：<strong>Yippeh! Your URL is challenge/training/encodings/url/saw_lotion.php?p=eaeiroaocece&amp;cid=52#password=fibre_optics Very well done!</strong> 打开网站即可。</p>
+<h2 id="url"><a href="#url" class="headerlink" title="url"></a>url</h2><p>统一资源定位符是对可以从互联网上得到的资源的位置和访问方法的一种简洁的表示，是互联网上标准资源的地址。互联网上的每个文件都有一个唯一的URL，它包含的信息指出文件的位置以及浏览器应该怎么处理它。</p>
+<h2 id="url编码"><a href="#url编码" class="headerlink" title="url编码"></a>url编码</h2><p>url编码是一种浏览器用来打包表单输入的格式。浏览器从表单中获取所有的name和其中的值 ，将它们以name/value参数编码（移去那些不能传送的字符，将数据排行等等）作为URL的一部分或者分离地发给服务器。</p>
+<h1 id="WeChall-PrimeFactory"><a href="#WeChall-PrimeFactory" class="headerlink" title="[WeChall]PrimeFactory"></a>[WeChall]PrimeFactory</h1><p><a href="http://www.wechall.net/challenge/training/prime_factory/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
+<h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>找素数<br>Your task is simple:<br>Find the first two primes above 1 million, whose separate digit sums are also prime.<br>As example take 23, which is a prime whose digit sum, 5, is also prime.<br>The solution is the concatination of the two numbers,<br>Example: If the first number is 1,234,567<br>and the second is 8,765,432,<br>your solution is 12345678765432</p>
+<h2 id="writeup-1"><a href="#writeup-1" class="headerlink" title="writeup"></a>writeup</h2><p>写程序<br>    def isPrime(n):<br>    for i in range(2,n):<br>        if i*i &lt;= n:<br>            if n%i == 0:<br>                return False<br>    return True</p>
+<pre><code>def sumA(n):
+#return n-((n-1)/9*9)
+sum=0
+while(n&gt;0):
+    sum+=n%10
+    n/=10
+return sum
+def main():
+i=1000001
+a=[]
+k=0
+while True:
+    if len(a)==2:
+        break
+    if isPrime(i):
+        if isPrime(sumA(i)):
+            a.append(str(i))
+    i=i+1
+print(a[0]+a[1])
+
+if __name__ == &apos;__main__&apos;:
+main()
+</code></pre><p>作者：诸葛硕熊<br>链接：<a href="https://www.jianshu.com/p/5144b4171cdf" target="_blank" rel="noopener">https://www.jianshu.com/p/5144b4171cdf</a><br>來源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
+
       
     </div>
     
@@ -334,6 +367,12 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/ctf-wechall/" rel="tag"># ctf,wechall</a>
+          
+        </div>
+      
 
       
       
@@ -343,15 +382,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2018/05/29/wechall-writeup 002/" rel="next" title="writeup_0002">
+                <i class="fa fa-chevron-left"></i> writeup_0002
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/28/测试/" rel="prev" title="">
-                 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -474,7 +513,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#hello-world"><span class="nav-number">1.</span> <span class="nav-text">hello world</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WeChall-Encodings-URL"><span class="nav-number">1.</span> <span class="nav-text">[WeChall]Encodings:URL</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#writeup"><span class="nav-number">1.2.</span> <span class="nav-text">writeup</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#url"><span class="nav-number">1.3.</span> <span class="nav-text">url</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#url编码"><span class="nav-number">1.4.</span> <span class="nav-text">url编码</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WeChall-PrimeFactory"><span class="nav-number">2.</span> <span class="nav-text">[WeChall]PrimeFactory</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述-1"><span class="nav-number">2.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#writeup-1"><span class="nav-number">2.2.</span> <span class="nav-text">writeup</span></a></li></ol></li></ol></div>
             
 
           </div>
