@@ -329,7 +329,7 @@
 <h1 id="WeChall-PrimeFactory"><a href="#WeChall-PrimeFactory" class="headerlink" title="[WeChall]PrimeFactory"></a>[WeChall]PrimeFactory</h1><p><a href="http://www.wechall.net/challenge/training/prime_factory/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
 <h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>找素数<br>Your task is simple:<br>Find the first two primes above 1 million, whose separate digit sums are also prime.<br>As example take 23, which is a prime whose digit sum, 5, is also prime.<br>The solution is the concatination of the two numbers,<br>Example: If the first number is 1,234,567<br>and the second is 8,765,432,<br>your solution is 12345678765432</p>
 <h2 id="writeup-1"><a href="#writeup-1" class="headerlink" title="writeup"></a>writeup</h2><p>写程序</p>
-<p>C++(得出答案只有一半，还不知道怎么回事)</p>
+<p>C++</p>
 <pre><code>#include&lt;iostream&gt;
 #include&lt;math.h&gt;
 using namespace std;
@@ -358,7 +358,7 @@ return add_number;
 
 int main() {
 int add_number;
-for (int number = 1000034;; number++) {
+for (int number = 1000000;; number++) {//先取number为1000000，运行程序的结果+1后再设其为number再次运行程序
     add_number = Add_Number(number);
     if (IsPrime(number)&amp;&amp;IsPrime(add_number)) {
         cout &lt;&lt; number &lt;&lt; endl;
