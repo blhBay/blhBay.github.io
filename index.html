@@ -249,7 +249,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/wechall-regex1-4/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/04/wechall-regex3-4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="blhbay">
@@ -268,7 +268,144 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/06/02/wechall-regex1-4/" itemprop="url">WeChall Regex系列writeup</a></h1>
+                <a class="post-title-link" href="/2018/06/04/wechall-regex3-4/" itemprop="url">wechall regex</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-04T20:47:34+08:00">
+                2018-06-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="WeChall-Training-Regex-level-3"><a href="#WeChall-Training-Regex-level-3" class="headerlink" title="[WeChall]Training:Regex (level 3)"></a>[WeChall]Training:Regex (level 3)</h1><p><a href="http://www.wechall.net/challenge/training/regex/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>Your next task is to submit an expression that matches valid filenames for certain images.<br>Your pattern shall match all images with the name wechall.ext or wechall4.ext and a valid image extension.<br>Valid image extensions are .jpg, .gif, .tiff, .bmp and .png.<br>Here are some examples for valid filenames: wechall4.tiff, wechall.png, wechall4.jpg, wechall.bmp</p>
+<h2 id="writeup"><a href="#writeup" class="headerlink" title="writeup"></a>writeup</h2><p>答案为<font color="red" size="4" face="“Consolas”">/^wechall4?\.(?:jpg|gif|tiff|bmp|png)$/</font>。<br>其中：</p>
+<blockquote>
+<p><font color="blue" size="4"> ? </font><br>：匹配前面的子表达式零次或一次。例如，”wechall4?” 可以匹配 “wechall” 或 “wechall4” 。? 等价于 {0,1}。</p>
+</blockquote>
+<blockquote>
+<p><font color="blue" size="4"> \ </font><br>：将下一个字符标记为一个特殊字符、或一个原义字符、或一个 向后引用、或一个八进制转义符。例如，’n’ 匹配字符 “n”。’\n’ 匹配一个换行符。序列 ‘\‘ 匹配 “\” 而 “(“ 则匹配 “(“。本题中表示愿意字符“<font color="blue" size="4">.</font>”</p>
+</blockquote>
+<blockquote>
+<p><font color="blue" size="4">(?:pattern)</font><br>：匹配 pattern 但不获取匹配结果，各匹配项之间可用“|”表示“或”。</p>
+</blockquote>
+<h1 id="WeChall-Training-Regex-level-4"><a href="#WeChall-Training-Regex-level-4" class="headerlink" title="[WeChall]Training:Regex (level 4)"></a>[WeChall]Training:Regex (level 4)</h1><p><a href="http://www.wechall.net/challenge/training/regex/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
+<h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>It is nice that we have valid images now, but could you please capture the filename, without extension, too?<br>As an example: wechall4.jpg should capture/return wechall4 in your pattern now.</p>
+<h2 id="writeup-1"><a href="#writeup-1" class="headerlink" title="writeup"></a>writeup</h2><p>答案<font color="red" size="4">/^(wechall4?).(?:jpg|gif|tiff|bmp|png)$/</font>。和上一个不一样，这次要获取的是”wechall4”，多以加上圆括号。</p>
+<blockquote>
+<p><font color="blue" size="4">(pattern)</font>：匹配 pattern 并获取这一匹配</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/wechall-regex1-2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="blhbay">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="blog_bay">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/06/02/wechall-regex1-2/" itemprop="url">WeChall Regex系列writeup</a></h1>
         
 
         <div class="post-meta">
@@ -330,24 +467,6 @@
 <h1 id="WeChall-Training-Regex-level-2"><a href="#WeChall-Training-Regex-level-2" class="headerlink" title="[WeChall]Training:Regex (level 2)"></a>[WeChall]Training:Regex (level 2)</h1><p><a href="http://www.wechall.net/challenge/training/regex/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
 <h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>这次要匹配”wechall”</p>
 <h2 id="writeup-1"><a href="#writeup-1" class="headerlink" title="writeup"></a>writeup</h2><p>再^和$之间加上wechall就行，答案为<font color="red" size="4" face="“Consolas”">/^wechall$/</font></p>
-<h1 id="WeChall-Training-Regex-level-3"><a href="#WeChall-Training-Regex-level-3" class="headerlink" title="[WeChall]Training:Regex (level 3)"></a>[WeChall]Training:Regex (level 3)</h1><p><a href="http://www.wechall.net/challenge/training/regex/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
-<h2 id="题目描述-2"><a href="#题目描述-2" class="headerlink" title="题目描述"></a>题目描述</h2><p>Your next task is to submit an expression that matches valid filenames for certain images.<br>Your pattern shall match all images with the name wechall.ext or wechall4.ext and a valid image extension.<br>Valid image extensions are .jpg, .gif, .tiff, .bmp and .png.<br>Here are some examples for valid filenames: wechall4.tiff, wechall.png, wechall4.jpg, wechall.bmp</p>
-<h2 id="writeup-2"><a href="#writeup-2" class="headerlink" title="writeup"></a>writeup</h2><p>答案为<font color="red" size="4" face="“Consolas”">/^wechall4?\.(?:jpg|gif|tiff|bmp|png)$/</font>。<br>其中：</p>
-<blockquote>
-<p><font color="blue" size="4"> ? </font><br>：匹配前面的子表达式零次或一次。例如，”wechall4?” 可以匹配 “wechall” 或 “wechall4” 。? 等价于 {0,1}。</p>
-</blockquote>
-<blockquote>
-<p><font color="blue" size="4"> \ </font><br>：将下一个字符标记为一个特殊字符、或一个原义字符、或一个 向后引用、或一个八进制转义符。例如，’n’ 匹配字符 “n”。’\n’ 匹配一个换行符。序列 ‘\‘ 匹配 “\” 而 “(“ 则匹配 “(“。本题中表示愿意字符“<font color="blue" size="4">.</font>”</p>
-</blockquote>
-<blockquote>
-<p><font color="blue" size="4">(?:pattern)</font><br>：匹配 pattern 但不获取匹配结果，各匹配项之间可用“|”表示“或”。</p>
-</blockquote>
-<h1 id="WeChall-Training-Regex-level-4"><a href="#WeChall-Training-Regex-level-4" class="headerlink" title="[WeChall]Training:Regex (level 4)"></a>[WeChall]Training:Regex (level 4)</h1><p><a href="http://www.wechall.net/challenge/training/regex/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
-<h2 id="题目描述-3"><a href="#题目描述-3" class="headerlink" title="题目描述"></a>题目描述</h2><p>It is nice that we have valid images now, but could you please capture the filename, without extension, too?<br>As an example: wechall4.jpg should capture/return wechall4 in your pattern now.</p>
-<h2 id="writeup-3"><a href="#writeup-3" class="headerlink" title="writeup"></a>writeup</h2><p>答案<font color="red" size="4">/^(wechall4?).(?:jpg|gif|tiff|bmp|png)$/</font>。和上一个不一样，这次要获取的是”wechall4”，多以加上圆括号。</p>
-<blockquote>
-<p><font color="blue" size="4">(pattern)</font>：匹配 pattern 并获取这一匹配</p>
-</blockquote>
 
           
         
@@ -1255,7 +1374,7 @@ main()
               
                 <a href="/archives">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

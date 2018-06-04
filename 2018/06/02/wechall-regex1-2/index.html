@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="encoding," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -79,18 +79,17 @@
 
 
 
-<meta name="description" content="[WeChall]Training:Encodings 1题目地址点这里 题目描述We intercepted this message from one challenger to another, maybe you can find out what they were talking about.To help you on your progress I coded a small ja">
-<meta name="keywords" content="encoding">
+<meta name="description" content="[WeChall]Training:Regex (level 1)题目地址点这里 题目描述先描述了一下学习正则表达式的重要性。给出要求：使用正则表达式匹配一个空字符串，并且提交该表达式的最短形式，分隔符为’/‘ writeup答案为/^$/，其中^表示匹配内容的开头，$为匹配内容的结尾，那么^和$中间没东西就是匹配空字符。相同的效果还可以用/^\s$/，其中\s表示  匹配任何空白字符，包括空格、">
 <meta property="og:type" content="article">
-<meta property="og:title" content="wechall writeup 004">
-<meta property="og:url" content="http://yoursite.com/2018/06/01/wechall-writeup-004/index.html">
+<meta property="og:title" content="WeChall Regex系列writeup">
+<meta property="og:url" content="http://yoursite.com/2018/06/02/wechall-regex1-2/index.html">
 <meta property="og:site_name" content="blog_bay">
-<meta property="og:description" content="[WeChall]Training:Encodings 1题目地址点这里 题目描述We intercepted this message from one challenger to another, maybe you can find out what they were talking about.To help you on your progress I coded a small ja">
+<meta property="og:description" content="[WeChall]Training:Regex (level 1)题目地址点这里 题目描述先描述了一下学习正则表达式的重要性。给出要求：使用正则表达式匹配一个空字符串，并且提交该表达式的最短形式，分隔符为’/‘ writeup答案为/^$/，其中^表示匹配内容的开头，$为匹配内容的结尾，那么^和$中间没东西就是匹配空字符。相同的效果还可以用/^\s$/，其中\s表示  匹配任何空白字符，包括空格、">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-06-02T10:04:22.097Z">
+<meta property="og:updated_time" content="2018-06-04T12:49:48.700Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="wechall writeup 004">
-<meta name="twitter:description" content="[WeChall]Training:Encodings 1题目地址点这里 题目描述We intercepted this message from one challenger to another, maybe you can find out what they were talking about.To help you on your progress I coded a small ja">
+<meta name="twitter:title" content="WeChall Regex系列writeup">
+<meta name="twitter:description" content="[WeChall]Training:Regex (level 1)题目地址点这里 题目描述先描述了一下学习正则表达式的重要性。给出要求：使用正则表达式匹配一个空字符串，并且提交该表达式的最短形式，分隔符为’/‘ writeup答案为/^$/，其中^表示匹配内容的开头，$为匹配内容的结尾，那么^和$中间没东西就是匹配空字符。相同的效果还可以用/^\s$/，其中\s表示  匹配任何空白字符，包括空格、">
 
 
 
@@ -120,13 +119,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/06/01/wechall-writeup-004/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/06/02/wechall-regex1-2/"/>
 
 
 
 
 
-  <title>wechall writeup 004 | blog_bay</title>
+  <title>WeChall Regex系列writeup | blog_bay</title>
   
 
 
@@ -253,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/01/wechall-writeup-004/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/06/02/wechall-regex1-2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="blhbay">
@@ -270,7 +269,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">wechall writeup 004</h1>
+          <h1 class="post-title" itemprop="name headline">WeChall Regex系列writeup</h1>
         
 
         <div class="post-meta">
@@ -282,8 +281,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-01T22:14:04+08:00">
-                2018-06-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-06-02T18:05:03+08:00">
+                2018-06-02
               </time>
             
 
@@ -320,10 +319,16 @@
       
 
       
-        <h1 id="WeChall-Training-Encodings-1"><a href="#WeChall-Training-Encodings-1" class="headerlink" title="[WeChall]Training:Encodings 1"></a>[WeChall]Training:Encodings 1</h1><p><a href="http://www.wechall.net/challenge/training/encodings1/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
-<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>We intercepted this message from one challenger to another, maybe you can find out what they were talking about.<br>To help you on your progress I coded a small java application, called <a href="">JDK</a>.<br>Note: The message is most likely in english.    </p>
-<p>10101001101000110100111100110100<br>00011101001100101111100011101000<br>10000011010011110011010000001101<br>11010110111000101101001111010001<br>00000110010111011101100011110111<br>11100100110010111001000100000110<br>00011110011110001111010011101001<br>01011100100000101100111011111110<br>10111100100100000111000011000011<br>11001111100111110111110111111100<br>10110010001000001101001111001101<br>00000110010111000011110011111100<br>11110011111010011000011110010111<br>0100110010111100100101110</p>
-<h2 id="writeup"><a href="#writeup" class="headerlink" title="writeup"></a>writeup</h2><p>题中指出最终答案为英文，推测二进制码应7位一组化为十六进制，使用题中的工具JPK，得到：This text is 7-bit encoded ascii. Your password is easystarter.答案即为easystarter</p>
+        <h1 id="WeChall-Training-Regex-level-1"><a href="#WeChall-Training-Regex-level-1" class="headerlink" title="[WeChall]Training:Regex (level 1)"></a>[WeChall]Training:Regex (level 1)</h1><p><a href="http://www.wechall.net/challenge/training/regex/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
+<h2 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h2><p>先描述了一下学习正则表达式的重要性。给出要求：使用正则表达式匹配一个空字符串，并且提交该表达式的最短形式，分隔符为’/‘</p>
+<h2 id="writeup"><a href="#writeup" class="headerlink" title="writeup"></a>writeup</h2><p>答案为<font color="red" face="“Consolas”">/^$/</font>，其中^表示匹配内容的开头，$为匹配内容的结尾，那么^和$中间没东西就是匹配空字符。相同的效果还可以用/^\s$/，其中\s表示</p>
+<blockquote>
+<p>匹配任何空白字符，包括空格、制表符、换页符等等。</p>
+</blockquote>
+<p>但是不符合题目要求，所以不行。</p>
+<h1 id="WeChall-Training-Regex-level-2"><a href="#WeChall-Training-Regex-level-2" class="headerlink" title="[WeChall]Training:Regex (level 2)"></a>[WeChall]Training:Regex (level 2)</h1><p><a href="http://www.wechall.net/challenge/training/regex/index.php" target="_blank" rel="noopener">题目地址点这里</a></p>
+<h2 id="题目描述-1"><a href="#题目描述-1" class="headerlink" title="题目描述"></a>题目描述</h2><p>这次要匹配”wechall”</p>
+<h2 id="writeup-1"><a href="#writeup-1" class="headerlink" title="writeup"></a>writeup</h2><p>再^和$之间加上wechall就行，答案为<font color="red" size="4" face="“Consolas”">/^wechall$/</font></p>
 
       
     </div>
@@ -339,12 +344,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/encoding/" rel="tag"># encoding</a>
-          
-        </div>
-      
 
       
       
@@ -354,8 +353,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/31/wechall-writeup-003/" rel="next" title="writeup_0003">
-                <i class="fa fa-chevron-left"></i> writeup_0003
+              <a href="/2018/06/01/wechall-writeup-004/" rel="next" title="wechall writeup 004">
+                <i class="fa fa-chevron-left"></i> wechall writeup 004
               </a>
             
           </div>
@@ -364,8 +363,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2018/06/02/wechall-regex1-2/" rel="prev" title="WeChall Regex系列writeup">
-                WeChall Regex系列writeup <i class="fa fa-chevron-right"></i>
+              <a href="/2018/06/04/wechall-regex3-4/" rel="prev" title="wechall regex">
+                wechall regex <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -489,7 +488,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WeChall-Training-Encodings-1"><span class="nav-number">1.</span> <span class="nav-text">[WeChall]Training:Encodings 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#writeup"><span class="nav-number">1.2.</span> <span class="nav-text">writeup</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#WeChall-Training-Regex-level-1"><span class="nav-number">1.</span> <span class="nav-text">[WeChall]Training:Regex (level 1)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述"><span class="nav-number">1.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#writeup"><span class="nav-number">1.2.</span> <span class="nav-text">writeup</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WeChall-Training-Regex-level-2"><span class="nav-number">2.</span> <span class="nav-text">[WeChall]Training:Regex (level 2)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#题目描述-1"><span class="nav-number">2.1.</span> <span class="nav-text">题目描述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#writeup-1"><span class="nav-number">2.2.</span> <span class="nav-text">writeup</span></a></li></ol></li></ol></div>
             
 
           </div>
